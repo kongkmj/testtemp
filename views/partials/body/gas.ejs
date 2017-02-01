@@ -1,0 +1,100 @@
+<script>
+
+
+  var config1 = {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [
+            {
+                borderColor : "#FF4848",
+                backgroundColor : "#FF4848",
+                pointBorderColor : "#FF4848",
+                pointBackgroundColor :"#FF4848",
+                pointBorderWidth : 1,
+                label: "실외",
+                data: [],
+                lineTension: 0,
+                fill: false,
+            },
+           ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'bottom',
+            },
+            hover: {
+                mode: 'label'
+            },
+            scales: {
+                xAxes: [{
+
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: '시간'
+                    }
+                }],
+                yAxes: [{
+                    ticks:{
+                      suggestedMax: 90,
+                      beginAtZero: true
+                    },
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'level'
+                    }
+                }]
+            },
+            title: {
+                display: true
+            }
+        }
+    };
+
+
+
+    var initChart = function(){
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myLine1 = new Chart(ctx, config1);
+
+  };
+
+
+  window.onload = function() {
+    //html tag가 모두 load 되었을 때
+    initChart();
+  };
+</script>
+<script src = "socket.io/socket.io.js"></script>
+<script>
+const socket = io.connect("http://localhost:3000");
+
+socket.on('arduinoGas',(arduinoGas)=>{
+  console.log('Data from Arduino: '+arduinoGas);
+  if(config1.data.datasets.length>0){
+    var now = new Date();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var second = now.getSeconds();
+    config1.data.labels.push(hour+":"+min+":"+second);
+
+    if(config1.data.labels.length==21){
+      $.each(config1.data.datasets,(i,datasets)=>{
+      config1.data.labels.shift(0,21);
+      config1.data.datasets[0].data.shift(0,20);
+      config1.data.datasets[0].data.push(arduinoGas);
+      })
+    }
+    else{
+      $.each(config1.data.datasets,(i,datasets)=>{
+      config1.data.datasets[0].data.push(arduinoGas);
+      })
+
+    }
+    window.myLine1.update();
+  }
+});
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head/head %>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">  <i class="glyphicon glyphicon-home fa-1x"></i> Test</a>
+            </div>
+
+
+            <ul class="nav navbar-top-links navbar-right">
+                <% include ../partials/top/message %>
+                <% include ../partials/top/notice %>
+                <% include ../partials/top/user %>
+            </ul>
+                <% include ../partials/side/sidemenu01 %>
+
+            <!-- /.navbar-static-side -->
+        </nav>
+
+            <% include ../partials/body/dashboard %>
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <% include ../partials/body/include %>
+
+
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-tachometer fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id ="tempText" class="huge">실내: 0ºC</div>
+                            <div>온도</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/temp">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right fa-2x"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="glyphicon glyphicon-tint fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id="humiText" class="huge">실내: 0% </div>
+                            <div>습도</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/humi">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right fa-2x"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                          <div id ="doorLock">
+                            <i class="fa fa-lock fa-5x"></i>
+                          </div>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id="doorText" class="huge">Close</div>
+                            <div>도어락</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                </a>
+                        <span class="pull-right">
+                          <div id ="doorToggle">
+                          <i class="fa fa-toggle-off fa-2x"></i>
+                        </div>
+                        </span>
+                        <div class="clearfix"></div>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-lightbulb-o fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id="lightText" class="huge">OFF</div>
+                            <div>전등</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                </a>
+                        <span class="pull-right">
+                          <div id = "lightToggle">
+                          <i class="fa fa-toggle-off fa-2x"></i>
+                        </div>
+                        </span>
+                        <div class="clearfix"></div>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-plug fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">2</div>
+                            <div>전원</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-toggle-on fa-2x"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-asterisk fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id="airconText" class="huge">OFF</div>
+                            <div>에어컨</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                </a>
+                        <span class="pull-right">
+                          <div id="airconToggle">
+                          <i class="fa fa-toggle-off fa-2x"></i>
+                        </div>
+                        </span>
+                        <div class="clearfix"></div>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-fire fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id="gasText" class="huge">0</div>
+                            <div>가스 센서</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/gas">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right fa-2x"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="glyphicon glyphicon-fire fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div id="fireText" class="huge">정상</div>
+                            <div>화재 센서</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/fire">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right fa-2x"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+    <script>
+    $(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+
+        height: 400
+    })
+
+});
+    </script>
+
+
+    <div class="row">
+      <div class="col-lg-8">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa  fa-calendar   fa-fw"></i> 가족 일정
+                              <div class="pull-right">
+                                  <div class="btn-group">
+                                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                          Actions
+                                          <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu pull-right" role="menu">
+                                          <li><a href="#">Action</a>
+                                          </li>
+                                          <li><a href="#">Another action</a>
+                                          </li>
+                                          <li><a href="#">Something else here</a>
+                                          </li>
+                                          <li class="divider"></li>
+                                          <li><a href="#">Separated link</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div id= calendar></div>
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+
+                      <!-- /.panel -->
+
+                      <!-- /.panel -->
+                  </div>
+        <div class="col-lg-4">
+
+            <div class="chat-panel panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-comments fa-fw"></i> Chat
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-refresh fa-fw"></i> Refresh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-check-circle fa-fw"></i> Available
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-times fa-fw"></i> Busy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-clock-o fa-fw"></i> Away
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-sign-out fa-fw"></i> Sign Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.panel-heading -->
+
+                <div class="panel-body" id="chatservice">
+                    <ul class="chat"id ="chat">
+                        <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">딸</strong>
+                                    <small class="pull-right text-muted">
+                                        <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                    </small>
+                                </div>
+                                <p>
+                                    엄마 나 이제 곧 학교에서 도착해서 시원하게 하려고 에어컨 미리 켜놨어요.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.panel-body -->
+                <div class="panel-footer">
+                  <form action="">
+                    <div class="input-group">
+                        <input id="message" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send
+                            </button>
+                        </span>
+                    </div>
+                    </form>
+                </div>
+                <!-- /.panel-footer -->
+            </div>
+            <!-- /.panel .chat-panel -->
+        </div>
+        <!-- /.col-lg-4 -->
+        <script src = "socket.io/socket.io.js"></script>
+        <script>
+         var socket = io.connect("http://localhost:3000");
+
+         $('#btn-chat').click(function(){
+           socket.emit('chat message',$('#message').val());
+           $('#message').val('');
+           return false;
+         });
+         socket.on('chat message',function(msg,time){
+
+           // 이미지는 등록할때의 파일 주소를 가지고 변경하면된다.
+           $('#chat').append('<li class="left clearfix"><span class="chat-img pull-left"><img src="https://success.salesforce.com/resource/1475884800000/sharedlayout/img/new-user-image-default.png" width = "50" height="50" alt="User Avatar" class="img-circle"/></span><div class="chat-body clearfix"><div class="header"><strong class="primary-foont">딸</strong><small class="pull-right text-muted"><i class="fa fa-clock-o fa-fw"></i>'+time+'</small></div><p>'+msg+'</p></div></li>');
+
+           // 스크롤 아래 포커스
+           var objDiv = document.getElementById("chatservice");
+           objDiv.scrollTop = objDiv.scrollHeight;
+         });
+
+         // 실내 온도 & 습도
+         var tempText = $("#tempText");
+         var humiText = $("#humiText");
+         socket.on('arduinoArray',(arduinoArray)=>{
+           tempText.text("실외: "+arduinoArray[0]+"ºC");
+           humiText.text("실외: "+arduinoArray[1]+"%");
+         })
+
+         // 가스 & 화재
+         var gasText = $("#gasText");
+         var fireText = $("#fireText");
+
+         socket.on("arduinoArray",(arduinoArray)=>{
+           gasText.text((arduinoArray[2]-100)/10);
+           if(arduinoArray[3]==1){
+             fireText.text("화재 발생");
+           }
+           else if(arduinoArray[3]==0){
+             fireText.text("정상");
+           }
+         })
+
+         // 도어락
+         var doorLock = $("#doorLock i");
+         var doorText = $("#doorText");
+         var doorToggle = $("#doorToggle i");
+         var doorcnt = 0;
+
+         doorToggle.click(()=>{
+           doorcnt +=1;
+           if(doorcnt==1){
+             socket.emit("door",doorcnt);
+             doorLock.removeClass("fa fa-lock");
+             doorLock.addClass("fa fa-unlock");
+             doorText.text("OPEN");
+             doorToggle.removeClass("fa fa-toggle-off");
+             doorToggle.addClass("fa fa-toggle-on")
+           }
+           else if(doorcnt==2){
+             socket.emit("door",doorcnt);
+             doorLock.removeClass("fa fa-unlock");
+             doorLock.addClass("fa fa-lock");
+             doorText.text("CLOSE");
+             doorToggle.removeClass("fa fa-toggle-on");
+             doorToggle.addClass("fa fa-toggle-off")
+             doorcnt = 0;
+           }
+         });
+
+         // 전등
+         var lightText = $("#lightText");
+         var lightToggle = $("#lightToggle i")
+         var lightcnt = 0;
+         lightToggle.click(()=>{
+           lightcnt+=1;
+           if(lightcnt==1){
+             socket.emit("light",lightcnt);
+             lightText.text("ON");
+             lightToggle.removeClass("fa fa-toggle-off");
+             lightToggle.addClass("fa fa-toggle-on");
+           }
+           else if(lightcnt==2){
+             socket.emit("light",lightcnt);
+             lightText.text("OFF");
+             lightToggle.removeClass("fa fa-toggle-on");
+             lightToggle.addClass("fa fa-toggle-off");
+             lightcnt = 0;
+           }
+
+         })
+
+         // 에어컨
+         var airconText = $("#airconText");
+         var airconToggle = $("#airconToggle i");
+         var airconcnt = 0;
+         airconToggle.click(()=>{
+           airconcnt+=1;
+           if(airconcnt==1){
+             socket.emit("aircon",airconcnt);
+             airconText.text("ON");
+             airconToggle.removeClass("fa fa-toggle-off");
+             airconToggle.addClass("fa fa-toggle-on");
+           }
+           else if(airconcnt==2){
+             socket.emit("aircon",airconcnt);
+             airconText.text("OFF");
+             airconToggle.removeClass("fa fa-toggle-on");
+             airconToggle.addClass("fa fa-toggle-off");
+             airconcnt = 0;
+           }
+
+         })
+
+
+         </script>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
